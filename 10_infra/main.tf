@@ -10,10 +10,10 @@ terraform {
     }
   }
   backend "s3" {
-    bucket  = "{YOUR-S3-BUCKET-NAME}"
-    key     = "{YOUR-S3-BUCKET-KEY}"
+    bucket  = "tastylog-tfstate-bucket-tmitsui-wands"
+    key     = "tastylog-dev.tfstate"
     region  = "ap-northeast-1"
-    profile = "terraform"
+    profile = "terraform_user"
   }
 }
 
@@ -21,12 +21,12 @@ terraform {
 # Provider
 # ---------------------------------------------
 provider "aws" {
-  profile = "terraform"
+  profile = "terraform_user"
   region  = "ap-northeast-1"
 }
 
 provider "aws" {
   alias   = "virginia"
-  profile = "terraform"
+  profile = "terraform_user"
   region  = "us-east-1"
 }
