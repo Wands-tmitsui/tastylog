@@ -19,7 +19,7 @@ env:
   TF_PROJECT: tastylog
   TF_ENVIRONMENT: dev
 
-  defaults:
+defaults:
   run:
     shell: bash
     working-directory: "10_infra/"
